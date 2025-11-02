@@ -36,7 +36,7 @@ Diplomacy is a negotiation-focused strategy board game featuring seven major pow
 
 Each turn is simultaneous, and success relies on forming (and betraying!) alliances. For more information, look into the rules of the game.
 
-## My agent
+## 🤖 My agent
 
 My agent is a greedy agent with a better heuristic. The heuristic works by first assigning initial utilities to each province based on two main factors:
 - Current ownership (mine / neutral / enemy)
