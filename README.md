@@ -4,6 +4,7 @@ A small archive of the **Diplomacy** agents I developed alongside the baseline a
 
 This was the project for CITS3011: Intelligent Agents in 2025.
 
+
 ## 🎯 Project Goal
 
 Develop an agent capable of outperforming the scenario where each opponent could be the following:
@@ -13,6 +14,7 @@ Develop an agent capable of outperforming the scenario where each opponent could
 - `GreedyAgent` 40%
 
 Testing was performed over **700 games**.
+
 
 ## 🧠 Performance Results
 
@@ -31,6 +33,7 @@ Results of my agent across 700 games (100 games as each power).
 
 > **Overall**: ~50% win rate against the pool — strong dominance as France and Germany.
 
+
 ## 📝 About Environment
 
 Diplomacy is a negotiation-focused strategy board game featuring seven major powers:
@@ -38,7 +41,8 @@ Diplomacy is a negotiation-focused strategy board game featuring seven major pow
 
 Each turn is simultaneous, and success relies on forming (and betraying!) alliances. For more information, look into the rules of the game.
 
-## Resources
+
+## 🍕 Resources
 
 - Engine: https://github.com/diplomacy/diplomacy  
 - Python Package Docs: https://diplomacy.readthedocs.io/en/stable/  
