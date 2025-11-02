@@ -2,23 +2,19 @@
 
 A small archive of the **Diplomacy** agents I developed alongside the baseline agents provided for the project.
 
-This was the project for CITS3011: Intelligent Agents in 2025.
-
+This was the project for CITS3011: Intelligent Agents in 2025. 
 
 ## 🎯 Project Goal
 
-Develop an agent capable of outperforming the scenario where each opponent could be the following:
+Develop an agent capable of outperforming a scenario where each opponent could be the following:
 
 - `RandomAgent` 20%
 - `AttitudeAgent` 40%
 - `GreedyAgent` 40%
 
-Testing was performed over **700 games**.
-
-
 ## 🧠 Performance Results
 
-Results of my agent across 700 games (100 games as each power).
+Results of my agent across **700 games** (100 games as each power).
 
 | Country  | Avg SCs | Std Dev | Wins | Survives | Defeats |
 |---------:|--------:|--------:|-----:|---------:|--------:|
@@ -33,7 +29,6 @@ Results of my agent across 700 games (100 games as each power).
 
 > **Overall**: ~50% win rate against the pool — strong dominance as France and Germany.
 
-
 ## 📝 About Environment
 
 Diplomacy is a negotiation-focused strategy board game featuring seven major powers:
@@ -41,6 +36,24 @@ Diplomacy is a negotiation-focused strategy board game featuring seven major pow
 
 Each turn is simultaneous, and success relies on forming (and betraying!) alliances. For more information, look into the rules of the game.
 
+## My agent
+
+My agent is a greedy agent with a better heuristic. The heuristic works by first assigning initial utilities to each province based on two main factors:
+- Current ownership (mine / neutral / enemy)
+- Whether it is a supply center
+
+Once the utilities are assigned, each province then diffuses 50% of its value to neighbours and gains 50% of the average value from those neighbours.
+
+Mathemathically:
+```
+new_val(node) = (1 - decay) * old_val(node) + decay * mean(old_val(neighbouring nodes))
+```
+
+Where:  
+- `decay = 0.5`  
+- Diffusion repeated **2 times**
+
+Then each unit picks whichever adjacent province has the highest utility. 
 
 ## 🍕 Resources
 
